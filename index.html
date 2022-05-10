@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Negócios</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="estilizar.css">
+</head>
+<body>
+    <section class="primeira">
+        <form class="form" onsubmit = "controle.adiciona(event)">
+            <div>
+                <h1 class="titulo">Negociações</h1>
+                <div class = "menView"></div>
+            </div>
+            <div class="form-input">
+                <label for="data">Data de nascimento</label>
+                <input type="date" id="data" class="form-control" required autofocus>
+            </div>
+            <div class="form-input">
+                <label for="quantidade">Quantidade</label>
+                <input type="number" id="quantidade" class="form-control" min="1" step="0.01" value="1" required>
+            </div>
+            <div class="form-input">
+                <label for="valor">Valor</label>
+                <input type="number" id="valor" class="form-control" min="0.01" step="0.01" value="0.0" required>
+            </div>
+            <div>
+                <button type="submit" id="enviar">Enviar</button>
+            </div>
+            
+            <div id="negocioView">
+
+            </div>
+        </form>
+    </section>
+    <script src="Negociacao.js"></script>
+    <script src="Controle.js"></script>
+    <script src="NegociacaoHelper.js"></script>
+    <script src="Lista.js"></script>
+    <script src="NegocioView.js"></script>
+    <script>
+        let controle = new Controle();
+    </script>
+</body>
+</html>
